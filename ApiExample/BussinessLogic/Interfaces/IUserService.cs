@@ -11,8 +11,8 @@ namespace ApiExample.BussinessLogic.Interfaces
         Task<string> Auth(UserIdentityBlo userIdentityBlo);
         Task<string> Register(UserIdentityBlo userIdentityBlo);
         Task<UserInformationBlo> Get(int id);
-        Task<UserInformationBlo> Update(UserUpdateBlo userUpdateBlo);
-        Task<bool> isExistEmail(string email);
-        Task<bool> isExistLogin(string login);
+        Task<UserInformationBlo> Update(UserUpdateBlo userUpdateBlo, string token);
+        Task<bool> IsExistEmail(string email);
+        Task<bool> IsExistLogin(string login);
     }
 }

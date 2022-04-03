@@ -52,24 +52,46 @@ namespace ApiExample.BussinessLogic.Services
             return user.Token;
         }
 
-        public Task<UserInformationBlo> Get(int id)
+        public async Task<UserInformationBlo> Get(int id)
         {
-            throw new NotImplementedException();
+            UserRto user = await _context.Users.FirstOrDefaultAsync(h => h.Id == id);
+
+            if (user == null) throw new NotFound("Пользователя с таким id нет");
+
+            return _mapper.Map<UserInformationBlo>(user);
         }
 
-        public Task<bool> isExistEmail(string email)
+        public async Task<bool> IsExistEmail(string email)
         {
-            throw new NotImplementedException();
+            UserRto user = await _context.Users.FirstOrDefaultAsync(h => h.Email == email);
+
+            if (user == null) return false;
+
+            return true;
         }
 
-        public Task<bool> isExistLogin(string login)
+        public async Task<bool> IsExistLogin(string login)
         {
-            throw new NotImplementedException();
+            UserRto user = await _context.Users.FirstOrDefaultAsync(h => h.Login == login);
+
+            if (user == null) return false;
+
+            return true;
         }
 
-        public Task<UserInformationBlo> Update(UserUpdateBlo userUpdateBlo)
+        public async Task<UserInformationBlo> Update(UserUpdateBlo userUpdateBlo, string token)
         {
-            throw new NotImplementedException();
+            UserRto user = await _context.Users.FirstOrDefaultAsync(h => h.Token == token);
+
+            if (user == null) throw new NotFound("Пользователя с таким токеном нет");
+
+            user.Login = userUpdateBlo.Login;
+            user.Email = userUpdateBlo.Email;
+
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+
+            return _mapper.Map<UserInformationBlo>(user);
         }
     }
 }

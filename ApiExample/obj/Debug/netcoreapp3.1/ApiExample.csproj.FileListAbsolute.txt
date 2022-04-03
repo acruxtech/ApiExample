@@ -50,7 +50,6 @@ C:\MyDocuments\Proger\ASP.NET\ApiExample\ApiExample\bin\Debug\netcoreapp3.1\runt
 C:\MyDocuments\Proger\ASP.NET\ApiExample\ApiExample\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\MyDocuments\Proger\ASP.NET\ApiExample\ApiExample\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\MyDocuments\Proger\ASP.NET\ApiExample\ApiExample\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\MyDocuments\Proger\ASP.NET\ApiExample\ApiExample\obj\Debug\netcoreapp3.1\ApiExample.csproj.AssemblyReference.cache
 C:\MyDocuments\Proger\ASP.NET\ApiExample\ApiExample\obj\Debug\netcoreapp3.1\ApiExample.GeneratedMSBuildEditorConfig.editorconfig
 C:\MyDocuments\Proger\ASP.NET\ApiExample\ApiExample\obj\Debug\netcoreapp3.1\ApiExample.AssemblyInfoInputs.cache
 C:\MyDocuments\Proger\ASP.NET\ApiExample\ApiExample\obj\Debug\netcoreapp3.1\ApiExample.AssemblyInfo.cs

@@ -1,5 +1,7 @@
 ﻿using ApiExample.BussinessLogic.Interfaces;
 using ApiExample.BussinessLogic.Models;
+using ApiExample.DataAccess.Interfaces;
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,18 @@ namespace ApiExample.BussinessLogic.Services
 {
     public class NoteService : INoteService
     {
+        private readonly IContext _context;
+        private readonly IMapper _mapper;
+
+        public NoteService(IContext context, IMapper mapper)
+        {
+            _context = context;
+            _mapper = mapper;
+        }
+
         public Task<NoteInformationBlo> Add(NoteInformationBlo noteInformationBlo, string token)
         {
-            throw new NotImplementedException();
+            
         }
 
         public Task<bool> Delete(int id, string token)
