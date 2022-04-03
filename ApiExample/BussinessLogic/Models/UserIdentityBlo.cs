@@ -8,6 +8,7 @@ namespace ApiExample.BussinessLogic.Models
     public class UserIdentityBlo
     {
         public string Email { get; set; }
+        public string Login { get; set; }
         public string Password { get; set; }
     }
 }

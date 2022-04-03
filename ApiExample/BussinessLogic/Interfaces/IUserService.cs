@@ -8,8 +8,8 @@ namespace ApiExample.BussinessLogic.Interfaces
 {
     public interface IUserService
     {
-        Task<UserInformationBlo> Auth(UserIdentityBlo userIdentityBlo, out string token);
-        Task<UserInformationBlo> Register(UserIdentityBlo userIdentityBlo, out string token);
+        Task<string> Auth(UserIdentityBlo userIdentityBlo);
+        Task<string> Register(UserIdentityBlo userIdentityBlo);
         Task<UserInformationBlo> Get(int id);
         Task<UserInformationBlo> Update(UserUpdateBlo userUpdateBlo);
         Task<bool> isExistEmail(string email);
